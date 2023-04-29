@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>{{ data.selectedEntry.message }}</h1>
+<div mat-dialog-content>
+  <p>Date: {{ data.selectedEntry.date }}</p>
+  <p>Time: {{ data.selectedEntry.time }}</p>
+  <p>Level: {{ data.selectedEntry.level }}</p>
+  <p>Column1: {{ data.selectedEntry.column1 }}</p>
+  <p>Thread: {{ data.selectedEntry.thread }}</p>
+  <p>Stack Trace: {{ data.selectedEntry.stackTrace}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>
+
+

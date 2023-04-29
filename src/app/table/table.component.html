@@ -1,0 +1,40 @@
+<div>
+  <label *ngFor="let level of ['ERROR', 'WARN', 'INFO', 'DEBUG', 'TRACE']">
+    <input type="checkbox" [value]="level" (change)="onLevelToggle(level)" [checked]="selectedLevels[level]"> {{level}}
+  </label>
+</div>
+<table>
+  <thead>
+  <tr>
+    <th>No.</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Level</th>
+    <th>Column1</th>
+    <th>Thread</th>
+    <th>Message</th>
+    <th *ngIf="hasErrorEntries()">Stack trace</th>
+  </tr>
+  </thead>
+  <tbody>
+  <ng-container *ngFor="let entry of filteredLogEntries(); let i = index">
+    <tr [ngClass]="{ 'error-row': entry.level === 'ERROR', 'clickable-row': true }" (click)="onRowClick(entry)">
+      <td>{{ entry.lineNumber }}</td>
+      <td>{{ entry.date }}</td>
+      <td>{{ entry.time }}</td>
+      <td>{{ entry.level }}</td>
+      <td>{{ entry.column1 }}</td>
+      <td>{{ entry.thread }}</td>
+      <td>{{ entry.message }}</td>
+      <td *ngIf="entry.level === 'ERROR'">
+        <button (click)="toggleExpandedEntry(entry)">Toggle stack trace</button>
+      </td>
+    </tr>
+    <tr *ngIf="expandedEntry === entry" class="stack-trace-row">
+      <td colspan="8">
+        <pre>{{ entry.stackTrace.join('\n') }}</pre>
+      </td>
+    </tr>
+  </ng-container>
+  </tbody>
+</table>
