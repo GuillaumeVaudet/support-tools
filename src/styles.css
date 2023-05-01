@@ -1,4 +1,10 @@
 /*
+Light mode
+ */
+/*
+Dark mode
+ */
+/*
 Font
  */
 @font-face {
@@ -7,13 +13,36 @@ Font
   font-weight: 400;
   src: url("./assets/fonts/Nunito-Regular.ttf") format("truetype");
 }
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
 html, body {
   height: 100%;
 }
 
 body {
-  margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #F1F4FA;
+}
+
+button {
+  padding: 3px;
+  border-radius: 5px;
+  width: 100px;
+  background-color: #F1F4FA;
+  border: none;
+  color: #233788;
+}
+
+button:hover {
+  color: #F1F4FA;
+  background-color: #725A7A;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 /*# sourceMappingURL=styles.css.map */

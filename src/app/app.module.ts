@@ -12,6 +12,8 @@ import { FilterByLevelsPipe } from './pipe/filter-by-levels.pipe';
 import { LinesViewComponent } from './lines-view/lines-view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
+import {HttpClientModule} from "@angular/common/http";
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import {MatDialogModule} from "@angular/material/dialog";
     DataComponent,
     TableComponent,
     FilterByLevelsPipe,
-    LinesViewComponent,
-  ],
+    LinesViewComponent
+],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule,
+    MatSidenavModule
   ],
   providers: [DataComponent],
   bootstrap: [AppComponent]

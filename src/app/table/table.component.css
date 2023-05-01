@@ -1,5 +1,28 @@
+.table-container {
+  padding: 1rem;
+}
+
+/*
+Level colors
+ */
 .clickable-row {
   cursor: pointer;
+}
+
+.level-info {
+  color: green;
+}
+
+.level-warn {
+  color: orange;
+}
+
+.level-error {
+  color: red;
+}
+
+.level-debug {
+  color: pink;
 }
 
 /*# sourceMappingURL=table.component.css.map */

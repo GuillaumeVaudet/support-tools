@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 export interface LogEntry {
   lineNumber: number;
@@ -28,7 +29,7 @@ export class LogParserService {
   private selectedFileSize!: number;
   private selectedLevelFilter: string | null = null;
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
   updateLogEntries(logEntries: LogEntry[]): void {
     this.logEntriesSource.next(logEntries);
   }

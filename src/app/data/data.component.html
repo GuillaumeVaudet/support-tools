@@ -1,22 +1,26 @@
-<button (click)="viewState = 'global'">Global</button>
-<button (click)="viewState = 'table'">Table View</button>
-<button (click)="viewState = 'graph'">Graph View</button>
-<button (click)="viewState = 'other'">Other View</button>
+<div class="nav-switch">
+  <button (click)="viewState = 'global'">Global</button>
+  <button (click)="viewState = 'table'">Table View</button>
+  <button (click)="viewState = 'chart'">Graph View</button>
+  <button (click)="viewState = 'other'">Other View</button>
+</div>
 
 <div [ngSwitch]="viewState">
   <ng-container *ngSwitchCase="'global'">
-    <p>Nom du fichier : {{ uploadFileName }}</p>
-    <p>Taille du fichier: {{ uploadFileSize }} octets</p>
-    <div *ngFor="let level of levelsCount | keyvalue">
-      <button (click)="navigateToTableWithFilter(level.key)">{{ level.key }}: {{ level.value }} lignes</button>
+    <div class="data-container">
+      <p>Nom du fichier : {{ uploadFileName }}</p>
+      <p>Taille du fichier: {{ uploadFileSize }} octets</p>
+      <div *ngFor="let level of levelsCount | keyvalue">
+        <button (click)="navigateToTableWithFilter(level.key)">{{ level.key }}: {{ level.value }} lignes</button>
+      </div>
     </div>
   </ng-container>
   <ng-container *ngSwitchCase="'table'">
     <app-table></app-table>
   </ng-container>
 
-  <ng-container *ngSwitchCase="'graph'">
-    <!-- Le code pour l'affichage du graphique -->
+  <ng-container *ngSwitchCase="'chart'">
+
   </ng-container>
 
   <ng-container *ngSwitchCase="'other'">

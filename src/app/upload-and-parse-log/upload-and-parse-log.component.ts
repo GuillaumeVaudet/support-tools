@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LogParserService, LogEntry } from '../services/log-parser.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'upload-and-parse-log',
@@ -10,7 +11,7 @@ export class UploadAndParseLogComponent {
   logEntries: LogEntry[] = [];
   unparsedLines: string[] = [];
 
-  constructor(private logParserService: LogParserService) {}
+  constructor(private logParserService: LogParserService, private router: Router) {}
 
   onFileSelected(event: Event): void {
     const files = (event.target as HTMLInputElement).files;
@@ -25,6 +26,8 @@ export class UploadAndParseLogComponent {
         this.logParserService.updateLogEntries(this.logEntries);
         this.logParserService.setSelectedFileName(file.name);
         this.logParserService.setSelectedFileSize(file.size);
+
+        this.router.navigate(['/data']);
       };
 
       fileReader.readAsText(file);

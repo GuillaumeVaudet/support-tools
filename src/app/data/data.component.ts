@@ -11,7 +11,8 @@ export class DataComponent implements OnInit, OnDestroy {
   logEntries: LogEntry[] = [];
   private logEntriesSubscription!: Subscription;
 
-  viewState: 'global' | 'table' | 'graph' | 'other' = 'global';
+  viewState: 'global' | 'table' | 'chart' | 'other' = 'global';
+
   uploadFileName!: string;
   uploadFileSize!: number;
   levelsCount: { [key: string]: number } = {};

@@ -1,0 +1,22 @@
+@import "src/assets/_variables";
+
+.main-container{
+  display: flex;
+  border: 1px solid red;
+  height: 100vh;
+}
+
+.nav-container{
+  border: 1px solid gold;
+  width: 20vh;
+  padding: 1.5rem;
+  background-color: $dark-primary-color;
+}
+
+.app-container{
+  border: 1px solid green;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: $dark-primary-color;
+  overflow: scroll;
+}

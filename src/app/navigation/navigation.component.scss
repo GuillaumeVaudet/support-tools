@@ -1,0 +1,49 @@
+@import "src/assets/_variables";
+
+nav{
+  text-align: center;
+}
+
+img{
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+}
+
+.splitter{
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $dark-text-color;
+  margin: 20px auto 20px;
+}
+
+.navBar{
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navBar a {
+  color: $dark-text-color;
+  position: relative;
+}
+.navBar a::after {
+  color: $dark-text-color;
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $dark-text-color;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.navBar a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
