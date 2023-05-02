@@ -1,5 +1,4 @@
-@import "assets/_variables";
-
+@import "assets/_project-variables";
 /*
 Font
  */
@@ -20,20 +19,33 @@ Font
 html, body { height: 100%; }
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  color: $dark-text-color;
+  color: $extra-light-gray;
 }
-
+h1{
+  background-color: $primary-blue;
+  color: $extra-light-blue;
+  padding: 4px;
+  margin-bottom: 20px;
+}
 button{
   padding: 3px;
   border-radius: 5px;
   width: 100px;
-  background-color: $dark-text-color;
+  background-color: $extra-light-blue;
   border: none;
-  color: $dark-primary-color;
+  color: $primary-blue;
 }
+
 button:hover{
-  color: $dark-text-color;
-  background-color: $dark-secondary-color;
+  color: $light-blue;
+  background-color: $medium-blue;
   cursor: pointer;
   transition: 0.3s;
 }
+
+.active{
+  background-color: $secondary-blue;
+  width: 70%;
+  border-radius: 5px;
+}
+

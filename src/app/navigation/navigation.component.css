@@ -1,17 +1,31 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import "src/assets/_variables";
- *   |         ^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   navigation.component.scss 1:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"src/assets/_variables\";\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   navigation.component.scss 1:9  root stylesheet";
+nav {
+  text-align: center;
 }
+
+img {
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+}
+
+.splitter {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 20px auto 20px;
+}
+
+.navBar {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navBar a {
+  position: relative;
+  color: #EDF2FF;
+}
+
+/*# sourceMappingURL=navigation.component.css.map */

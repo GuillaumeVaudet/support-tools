@@ -56,7 +56,7 @@ export class TableComponent implements OnInit, OnDestroy {
   }
   onRowClick(entry: LogEntry): void {
     const dialogRef = this.dialog.open(LinesViewComponent, {
-      width: '500px',
+      width: '700px',
       data: { selectedEntry: entry }
     });
 

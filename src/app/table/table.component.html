@@ -7,12 +7,9 @@
   <table>
     <thead>
     <tr>
-      <th>No.</th>
       <th>Date</th>
       <th>Time</th>
       <th>Level</th>
-      <th>Column1</th>
-      <th>Thread</th>
       <th>Message</th>
       <th *ngIf="hasErrorEntries()">Stack trace</th>
     </tr>
@@ -20,9 +17,8 @@
     <tbody>
     <ng-container *ngFor="let entry of filteredLogEntries(); let i = index">
       <tr [ngClass]="{ 'error-row': entry.level === 'ERROR', 'clickable-row': true }" (click)="onRowClick(entry)">
-        <td>{{ entry.lineNumber }}</td>
-        <td>{{ entry.date }}</td>
-        <td>{{ entry.time }}</td>
+        <td class="bg-light">{{ entry.date }}</td>
+        <td class="bg-light">{{ entry.time }}</td>
         <td [ngClass]="{
       'level-info': entry.level === 'INFO',
       'level-warn': entry.level === 'WARN',
@@ -30,8 +26,6 @@
       'level-debug': entry.level === 'DEBUG',
       'level-trace': entry.level === 'TRACE'
       }">{{ entry.level }}</td>
-        <td>{{ entry.column1 }}</td>
-        <td>{{ entry.thread }}</td>
         <td>{{ entry.message }}</td>
         <td *ngIf="entry.level === 'ERROR'">
           <button (click)="toggleExpandedEntry(entry)">Toggle stack trace</button>

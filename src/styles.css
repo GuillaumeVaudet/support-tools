@@ -1,10 +1,4 @@
 /*
-Light mode
- */
-/*
-Dark mode
- */
-/*
 Font
  */
 @font-face {
@@ -29,20 +23,33 @@ body {
   color: #F1F4FA;
 }
 
+h1 {
+  background-color: #042475;
+  color: #EDF2FF;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
 button {
   padding: 3px;
   border-radius: 5px;
   width: 100px;
-  background-color: #F1F4FA;
+  background-color: #EDF2FF;
   border: none;
-  color: #233788;
+  color: #042475;
 }
 
 button:hover {
-  color: #F1F4FA;
-  background-color: #725A7A;
+  color: #D3DFF4;
+  background-color: #1865D8;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.active {
+  background-color: #1B49BE;
+  width: 70%;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,4 @@
-@import "src/assets/_variables";
-
+@import "../assets/_project-variables.scss";
 .main-container{
   display: flex;
   border: 1px solid red;
@@ -10,13 +9,13 @@
   border: 1px solid gold;
   width: 20vh;
   padding: 1.5rem;
-  background-color: $dark-primary-color;
+  background-color: $primary-blue;
 }
 
 .app-container{
   border: 1px solid green;
   width: 100%;
-  padding: 1.5rem;
-  background-color: $dark-primary-color;
+  background-color: #FFF;
   overflow: scroll;
+  color: $primary-blue;
 }

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["app.component.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA","file":"app.component.css"}
+{"version":3,"sourceRoot":"","sources":["app.component.scss","../assets/_project-variables.scss"],"names":[],"mappings":"AACA;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA,kBCVa;;;ADaf;EACE;EACA;EACA;EACA;EACA,OClBa","file":"app.component.css"}

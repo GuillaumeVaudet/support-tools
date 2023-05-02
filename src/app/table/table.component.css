@@ -10,19 +10,59 @@ Level colors
 }
 
 .level-info {
-  color: green;
+  background-color: green;
 }
 
 .level-warn {
-  color: orange;
+  background-color: orange;
 }
 
 .level-error {
-  color: red;
+  background-color: red;
 }
 
 .level-debug {
-  color: pink;
+  background-color: pink;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+td {
+  min-width: 100px;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  background-color: #F1F4FA;
+  border-bottom: #5B697E;
+  padding: 5px;
+}
+
+table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+th {
+  vertical-align: top;
+  border-top: 1px solid #5B697E;
 }
 
 /*# sourceMappingURL=table.component.css.map */
